@@ -41,3 +41,12 @@ generated link to see profiled data.
 расхождений массивов:
 1. встроенные функции php - быстро, но значения приводятся к строке
 2. циклы - когда нужна абсолютная строгость(проверяются даже типы)
+
+### Пример замеров
+
+| Function Name | Time (microsec) | |
+| ------ | ------ | ------ |
+| App\FunctionsStrictHandler::findDiff | 33,739 | native php functions with callback |
+| App\LoopStrictHandler::findDiff | 2,307 | loop with strict check === |
+| App\LoopHandler::findDiff | 2,266 | loop with soft check == |
+| App\FunctionsHandler::findDiff | 1,477 | native php functions |
