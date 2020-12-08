@@ -1,0 +1,6 @@
+.idea
+.git
+logs/*
+docker/logs
+vendor
+!.gitkeep
